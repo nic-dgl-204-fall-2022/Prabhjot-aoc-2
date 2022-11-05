@@ -104,6 +104,18 @@ In ```part2``` function we are doing the same process two times because whenever
        }
 
 
+## Second Solution
+
+**Refactor**
+
+**1) Added 'not null'**- I added ```?``` to different datatypes of parameters like:-
+
+   ```word: String?```
+          
+   ```(dataInput: List<String?>?)```
+
+As it is always a good practice to put ```?```` which basically states that the data type shouldn’t be null and if the compiler finds a null value, it will show error. 
+
 
 
 
