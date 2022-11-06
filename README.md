@@ -152,7 +152,10 @@ I moved the interface file to other file so that the Day1 class code will look c
             fun part1(dataInput: List<String?>?): T
             fun part2(dataInput: List<String?>?): T
             }
+            
+**5) added comments**
 
-
+Last change or one can say the last addition which I did to my code is writing ```comments```. Writing ```comments``` to the code is always a good practice it makes the code the more readable and cleaner.
+       
 
 
