@@ -116,7 +116,29 @@ In ```part2``` function we are doing the same process two times because whenever
 
 As it is always a good practice to put ```?```` which basically states that the data type shouldn’t be null and if the compiler finds a null value, it will show error. 
 
+**2) Removed extra variables and inlined some of the functions**
 
+To make code more idiomatic and Kotlin friendly I reduced most of the variables in the functions and made 3-4 lined code to one line. After reducing the functions to one line I realised that there was no need to add so many variables in the code. Also, having fewer variables helps to reduce the memory allocation in the program due to which the processing time will also decrease.
+
+      private fun threeLetters(word: String?): Boolean {
+        return Pattern.matches(".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*",word)
+    }
+
+     fun mistakenLetters(word: String?): Boolean {
+        return !Pattern.matches(".*[iol]",word)
+    }
+
+     fun overlappingPairs(word: String?): Boolean {
+        return Pattern.matches(".*(.)\\1.*(.)\\2.*",word)
+    }
+
+     fun isCorrect(word: String?): Boolean {
+        return threeLetters(word) && mistakenLetters(word) && overlappingPairs(word)
+    }
+
+     fun addition(word: String?): String {
+        return Long.toString(word!!.toLong(36) + 1, 36).replace('0', 'a')
+    }
 
 
 
