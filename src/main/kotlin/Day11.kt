@@ -1,44 +1,27 @@
+import java.lang.Long
 import java.util.regex.Pattern
-
 
 
 class Day11 : Data<String?> {
 
     private fun threeLetters(word: String?): Boolean {
-        val letters = ".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*"
-        val pattern = Pattern.matches(letters, word)
-        return pattern
+        return Pattern.matches(".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*",word)
     }
 
-    private fun mistakenLetters(word: String?): Boolean {
-        val letters = ".*[iol]"
-        val pattern = Pattern.matches(letters, word)
-        return !pattern
+     fun mistakenLetters(word: String?): Boolean {
+        return !Pattern.matches(".*[iol]",word)
     }
 
-    private fun overlappingPairs(word: String?): Boolean {
-        val q = ".*(.)\\1.*(.)\\2.*"
-        val pattern = Pattern.matches(q, word)
-        return pattern
+     fun overlappingPairs(word: String?): Boolean {
+        return Pattern.matches(".*(.)\\1.*(.)\\2.*",word)
     }
 
-    private fun isCorrect(word: String?): Boolean {
-
-        val m = threeLetters(word)
-        val n = mistakenLetters(word)
-        val o = overlappingPairs(word)
-
-        val bool = m && n && o
-
-        return bool
+     fun isCorrect(word: String?): Boolean {
+        return threeLetters(word) && mistakenLetters(word) && overlappingPairs(word)
     }
 
-    private fun addition(word: String?): String {
-
-        val letters = java.lang.Long.toString(word!!.toLong(36) + 1, 36)
-            .replace('0', 'a')
-
-        return letters
+     fun addition(word: String?): String {
+        return Long.toString(word!!.toLong(36) + 1, 36).replace('0', 'a')
     }
 
     override fun part1(dataInput: List<String?>?): String {
