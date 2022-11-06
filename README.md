@@ -140,7 +140,9 @@ To make code more idiomatic and Kotlin friendly I reduced most of the variables 
         return Long.toString(word!!.toLong(36) + 1, 36).replace('0', 'a')
     }
 
+**3) 3)	Removed access modifiers
 
+I had ```private``` access modifiers before [this commit](https://github.com/nic-dgl-204-fall-2022/Prabhjot-aoc-2/blob/main/src/main/kotlin/Day11.kt). I put private before every function because I had the variables with same name like ```pattern``` in every function.([commit](https://github.com/nic-dgl-204-fall-2022/Prabhjot-aoc-2/blob/6de8e039ab1fc09f2f793c7a33be25865935e393/src/main/kotlin/Day11.kt)) Its always a good practise to encapsulate the functions so that there properties and variable would not affect the others but now I feel no need of ```private``` as most of the functions are inlined and same named variables or you can say most of variables are removed. 
 
 
 
