@@ -4,7 +4,7 @@ import java.util.regex.Pattern
 
 class Day11 : Data<String?> {
 
-    private fun threeLetters(word: String?): Boolean {
+     fun threeLetters(word: String?): Boolean {
         return Pattern.matches(".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*",word)
     }
 
@@ -50,5 +50,5 @@ interface Data<T> {
     fun part2(dataInput: List<String?>?): T
 }
 fun main(){
-    Day1()
+    Day11()
 }
