@@ -157,5 +157,24 @@ I moved the interface file to other file so that the Day1 class code will look c
 
 Last change or one can say the last addition which I did to my code is writing ```comments```. Writing ```comments``` to the code is always a good practice it makes the code the more readable and cleaner.
        
+## Reflection
+
+The problem I chose from Advent of code this time was a bit more challenging than the AOC-1’s problem because it took more time compared to that one. Initially the problem was easy to understand because we always use to play with passwords whenever we used to sign up in new sites or apps, it was relatable. To approach any coding problem, I use pen & paper to think about the problem and do some rough work over there. I did the same to think about the logic of the problem. First of all I tried to make something out of the cases given in the problem and I thought why not to start writing the functions first for those three cases. Then, after building those functions I got a brief understanding of how I’ll be adding more code to it like just after writing those three functions I figured out that I also need ```isCorrect``` method to get a combined true/false result from those three of the cases. 
+
+**How long did I take to find a complete solution?**
+
+I coded for about 6-8 hours to solve the problem.
+
+**What documentation and resources did I use to identify my solution?**
+
+This time I did not look up to much of the documentations and blogs but still sites like – [Kotlin documentation on regular expressions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/) & [regexr.com](https://regexr.com/) helped while solving the problem.
+
+**Did I use a good commit process (i.e., commit stable codon a regular basis?)**
+
+I cannot say that I have used good or not but I’ve improved my commit process compared to the last AOC assignment. As this time, whenever I made some code changes, I tried to commit and upload it on the GitHub.
+
+**Any challenges I faced? If yes then what I did do to solve them?** 
+
+Yes, as I said the problem was challenging compared to the previous one because it took more time compared to that. The major challenge I faced was of getting the second solution for the problem because I honestly didn’t get any idea if this solution can be refactored or not so I leave it for a day or two but somehow I tried to come back and refactored it to some extent. 
 
 
