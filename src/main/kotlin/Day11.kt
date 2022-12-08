@@ -12,7 +12,7 @@ class Day11 : Data<String?> {
 
     // checking that string shouldn’t be containing the letters i, o, l.
      fun mistakenLetters(word: String?): Boolean {
-        return !Pattern.matches(".*[iol]",word)
+        return !Pattern.matches("[iol]",word)
     }
 
     // checking that the string must contain at least two different and non-overlapping pairs of letters.
@@ -55,5 +55,6 @@ class Day11 : Data<String?> {
 
 
 fun main(){
-    Day11()
+    println(Day11().part1(listOf("hepxcrrq")))
+    println(Day11().part2(listOf("hepxcrrq")))
 }
