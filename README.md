@@ -16,15 +16,7 @@ Also for part 2 we have to find the next password, after taking the correct pass
 I approached this problem by sequentially by simply implementing the code according to the question. At first I made three functions ```threeLetters```, ```mistakenPattern``` and ```overlappingPairs```. Each of them have an argument ```word ```string and returns a ```boolean``` value at the end of the function. These function’s work is to check the three cases in order or to check the string against rules. 
 
 In first function i.e., ```threeLetters``` we are checking if the string includes include one increasing straight of at least three letters, like ```abc```, ```bcd```, ```cde```, and so on, up to ```xyz```.
-
-In second function i.e., ```mistakenPattern``` we are checking that string shouldn’t be containing the letters ```i, o, l```.
-
-In third function i.e, ```overlappingPairs``` we are checking that the string must contain at least two different and non-overlapping pairs of letters, like ```aa, bb, or zz. ```
-
-In all of three functions we are returning a ```boolean``` value true or false by which all of the three cases will be validated.
-
-.
-    
+.    
     
     private fun threeLetters(word: String): Boolean {
         val letters = ".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*"
@@ -33,6 +25,8 @@ In all of three functions we are returning a ```boolean``` value true or false b
     }
 .
 
+In second function i.e., ```mistakenPattern``` we are checking that string shouldn’t be containing the letters ```i, o, l```.
+
     private fun mistakenLetters(word: String): Boolean {
         val letters = ".*[iol]"
         val pattern = Pattern.matches(letters, word)
@@ -40,20 +34,21 @@ In all of three functions we are returning a ```boolean``` value true or false b
     }
 .
 
+In third function i.e, ```overlappingPairs``` we are checking that the string must contain at least two different and non-overlapping pairs of letters, like ```aa, bb, or zz. ```
+
     private fun overlappingPairs(word: String): Boolean {
         val q = ".*(.)\\1.*(.)\\2.*"
         val pattern = Pattern.matches(q, word)
         return pattern
     }
 
+In all of three functions we are returning a ```boolean``` value true or false by which all of the three cases will be validated.
 
 Now, we are achieving this with the help of ```pattern``` class regular expressions which is basically used to match a pattern in an input text. To gain more clarity I looked up this [Kotlin documentation on regular expressions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/). Here also we are taking the regular expressions pattern in the ```letters``` variable. 
 
-
-
 - For ```threeletters``` function the pattern is –
 
-        val letters = ".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*"
+           val letters = ".*(abc|bcd|cde|def|efg|fgh|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz).*"
         
    Because we have to include at least three adjacent letters that’s why we have a regex pattern like that which basically have three letters altered with ```|```         symbol which acts like OR operator.  
 
